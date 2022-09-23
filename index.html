@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- media query doesnt work without meta tag on line 7. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healtyfy Me</title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- code to link c ss file -->
+    <link rel="stylesheet" href="_2css/style.css">
+</head>
+<body>
+<!-- header section -->
+    <header class="header">
+        <a href="#" class="logo"> <i class="fa-solid fa-heart-pulse"></i> HealthyMe</a>
+   
+    <nav class="navbar">
+         <a href="#home">condition</a>
+        <a href="#dailyRoutine">dailyRoutine</a>
+        <a href="#call">call</a>
+        <a href="#blog">blog</a>
+        <a href="#record">record</a>
+    </nav>
+    <!-- add icons used in header -->
+    <div class="icons">
+        <div class="fa fa-bars" id="menu-btn"></div>
+        <div class="fa fa-search" id="search-btn"></div>
+        <div class="fa fa-phone" id="call-btn"></div>
+        <div class="fa fa-user" id="login-btn"></div>
+    </div>
+
+   <form class="search-form">
+    <input type="search" id="search-box" placeholder="search here....">
+    <label for="search-box" class="fa fa-search"></label>
+   </form>
+         <!--for call box:-  -->
+        <div class="CallDoc">
+            <!-- doctor 1 -->
+            <div class="box">
+                <i class="fa-brands fa-skype"></i>
+                <img src="image/img1.png">
+             <div class="content">
+                <h3>Dr.Shipra Kaul</h3>
+                <span class="degree">orthologist</span>
+             </div> 
+            </div>
+           <!-- doctor 2 -->
+            <div class="box">
+                <i class="fa-brands fa-skype"></i>
+                <img src="image/img2.png">
+            <div class="content">
+                <h3>Dr.Madan Malviya</h3>
+                <span class="degree">gynecologist</span>
+                
+            </div> 
+            </div>
+           <!-- doctor 3 -->
+            <div class="box">
+                <i class="fa-brands fa-skype"></i>
+                <img src="image/img3.png">
+            <div class="content">
+                <h3>Dr.Nishant Jain</h3>
+                <span class="degree">general physician</span>
+            </div> 
+            </div>
+            <a href="#" class="btn">Connect</a>
+         </div>
+    
+     <!-- create login page -->
+     <form action="#" class="login-form">
+        <h3>Login Now</h3>
+        <input type="email" placeholder="enter your e-mail" class="Box">
+        <input type="password" placeholder="password" class="Box">
+        
+        <p>Forget your Password? <a href="#"> click here</a></p>
+        <p>Dont have an account? <a href="#"> create now</a></p>
+        <input type="submit" value="Login Now" class="btn">
+     </form>
+
+
+
+    </header>
+    <!-- End of header section -->
+    <!-- Condition Section written as home-->
+     <section class="home" id="home">
+        <div class="content">
+       <h3>stay <span>healthy</span> and <span1>fit.</span1></h3>
+       <a href="#check" class="btn">Check Up</a>
+        </div>
+        
+      
+     </section>
+     <!-- changes required -->
+
+     <!-- daily routine section -->
+      <section class="dailyRoutine" id="dailyRoutine">
+        <h1 class="heading"> daily <span>Routine</span></h1>
+      <!-- <div class="box-container">
+        <div class="box">
+            <img src="../image/img6.png">
+            <h3><span>MONDAY</span></h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <a href="#" class="btn"> Let's start </a>
+        </div>
+
+        <div class="box">
+            <img src="../image/img8.png">
+            <h3><span>TUESDAY</span></h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <a href="#" class="btn"> follow up </a>
+        </div>
+
+      </div> -->
+      <button class="pre-btn"><img src="image/arrow.png" alt=""></button>
+      <button class="nxt-btn"><img src="image/arrow.png" alt=""></button>
+      <div class="container">
+        <div class="box">
+            <img src="../image/img6.png">
+            <h3><span>MONDAY</span></h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <a href="#" class="btn"> Let's start </a>
+        </div>
+      </div>
+
+
+    </section> 
+     <!-- daily Schedule -->
+
+
+
+
+
+
+
+    <script src="_3js/script.js"></script>
+</body>
+</html>
