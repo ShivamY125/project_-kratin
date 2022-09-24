@@ -1,5 +1,8 @@
 // first on is for search bar:-
 let searchForm = document.querySelector('.search-form');
+let nextBtn = document.querySelector('.nxt-btn');
+let prevBtn = document.querySelector('.pre-btn');
+let sliderContainer = document.querySelector('.slider .container');
 
 document.querySelector('#search-btn').onclick = () =>
 {
@@ -53,3 +56,19 @@ window.onscroll = () =>
     navbar.classList.remove('active');
 
 }
+
+prevBtn.addEventListener('click', () => {
+    sliderContainer.scrollBy({
+        top: 0,
+        left: -300,
+        behavior : "smooth"
+    })
+})
+
+nextBtn.addEventListener('click', () => {
+    sliderContainer.scrollBy({
+        top: 0,
+        left: 300,
+        behavior : "smooth"
+    })
+})
