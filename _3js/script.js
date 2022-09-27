@@ -57,18 +57,90 @@ window.onscroll = () =>
 
 }
 
-prevBtn.addEventListener('click', () => {
-    sliderContainer.scrollBy({
-        top: 0,
-        left: -300,
-        behavior : "smooth"
-    })
-})
 
-nextBtn.addEventListener('click', () => {
-    sliderContainer.scrollBy({
-        top: 0,
-        left: 300,
-        behavior : "smooth"
-    })
-})
+// code for Swiper in section buy(products):- 
+var swiper = new Swiper(".product-slider", {
+  loop:true,
+  spaceBetween: 20,
+   
+  autoplay: {
+    delay:7500,
+    disableonInteraction: false,
+
+  },
+  
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+     
+    },
+    768: {
+      slidesPerView: 2,
+ 
+    },
+    1020: {
+      slidesPerView: 3,
+    
+    },
+  },
+});
+
+
+
+
+//   Slider window of review of doctors:-
+var swiper = new Swiper(".review-slider", {
+  loop:true,
+  spaceBetween: 20,
+   
+  autoplay: {
+    delay:7500,
+    disableonInteraction: false,
+
+  },
+  
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+     
+    },
+    768: {
+      slidesPerView: 2,
+ 
+    },
+    1020: {
+      slidesPerView: 3,
+    
+    },
+  },
+});
+
+// routine slider
+var swiper = new Swiper(".routine-slider", {
+  loop: false,
+  spaceBetween: 20,
+   
+  autoplay: {
+    delay:7500,
+    disableonInteraction: false,
+
+  },
+  
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+     
+    },
+    768: {
+      slidesPerView: 3,
+ 
+    },
+    1020: {
+      slidesPerView: 4,
+    
+    },
+  },
+});
+
+
+

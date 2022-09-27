@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- code to link c ss file -->
     <link rel="stylesheet" href="_2css/style.css">
+    <!-- Siperjs.com link file used in section of sliding window of produects. -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 </head>
 <body>
 <!-- header section -->
@@ -19,9 +21,9 @@
     <nav class="navbar">
          <a href="#home">condition</a>
         <a href="#dailyRoutine">dailyRoutine</a>
-        <a href="#call">call</a>
+        <a href="#products">buy</a>
+        <a href="#review">review</a>
         <a href="#blog">blog</a>
-        <a href="#record">record</a>
     </nav>
     <!-- add icons used in header -->
     <div class="icons">
@@ -71,12 +73,12 @@
      <!-- create login page -->
      <form action="#" class="login-form">
         <h3>Login Now</h3>
-        <input type="email" placeholder="enter your e-mail" class="Box">
-        <input type="password" placeholder="password" class="Box">
+        <input type="email" placeholder="enter your e-mail" style="text-transform: none;" class="Box" id="email">
+        <input type="password" placeholder="password" class="Box" id="password">
         
         <p>Forget your Password? <a href="#"> click here</a></p>
         <p>Dont have an account? <a href="#"> create now</a></p>
-        <input type="submit" value="Login Now" class="btn">
+        <input type="submit" value="Login Now" class="btn" id="loginBtn">
      </form>
 
 
@@ -84,12 +86,100 @@
     </header>
     <!-- End of header section -->
     <!-- Condition Section written as home-->
+
      <section class="home" id="home">
         <div class="content">
        <h3>stay <span>healthy</span> and <span1>fit.</span1></h3>
-       <a href="#check" class="btn">Check Up</a>
+       <a href="#check" class="btn1" id="btn1">Check Up</a>
         </div>
-        
+        <!-- popup window used for filling the condition of patient -->
+        <div class="popup">
+            <div class="popup-content">
+                <img src="image/cross.png" alt="close" class="close">
+               <header>Checkup-Details</header>
+               <form action="#">
+                <div class="form-first">
+                    
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Day</label>
+                            <input id="day" type="text" placeholder=" day" required>
+                        </div>
+
+                        <div class="input-fields">
+                            <label>Weight</label>
+                            <input id="kg" type="number" placeholder=" KG" required>
+                        </div>
+
+                        <div class="input-fields">
+                            <label>Height</label>
+                            <input id="cm" type="number" placeholder=" cm" required>
+                        </div>
+                        <!--  -->
+                        <div class="input-fields">
+                            <label>Temperature</label>
+                            <input id="cel" type="number" placeholder=" cel/far" required>
+                        </div>
+
+                        <div class="input-fields">
+                            <label>Blood Pressure</label>
+                            <input id="enter" type="number" placeholder="enter" required>
+                        </div>
+
+                        <div class="input-fields">
+                            <label>Heart-Rate</label>
+                            <input id="beats" type="number" placeholder=" beats/min" required>
+                        </div>
+
+                        <div class="input-fields">
+                            <label>O2 level</label>
+                            <input id="oxy" type="number" placeholder=" /100" required>
+                        </div>
+                        
+                        <div class="input-fields">
+                            <label>Cholestrol level</label>
+                            <input id="min" type="number" placeholder=" beats/min" required>
+                        </div>
+
+                        <div class="input-fields">
+                            <label>Sugar level</label>
+                            <input id="sugar" type="number" placeholder=" /100" required>
+                        </div>
+
+                        <div class="input-fields">
+                            <label>Platelet count</label>
+                            <input id="plate" type="number" placeholder=" count" required>
+                        </div>
+
+                        <div class="input-fields">
+                            <label>RBC count</label>
+                            <input id="rbc" type="number" placeholder=" count" required>
+                        </div>
+
+                        <div class="input-fields">
+                            <label>WBC count</label>
+                            <input id="wbc" type="number" placeholder=" count" required>
+                        </div>
+
+                        <div class="input-fields">
+                            <label>presence of Infection</label>
+                            <!-- <input  type="text" placeholder=" Enter" required> -->
+                            <textarea  cols="50" rows="2" id="infec" placeholder="Enter"></textarea>
+                        </div>
+
+                        <div class="input-fields">
+                            <label> Final Report</label>
+                            <input type="text" id="final" placeholder=" Enter" required>
+                        </div>
+                    </div>
+                    <a href="#" class="btn" id="submit">submit</a>
+                </div>
+
+               </form>
+                
+            </div>
+        </div>
+       
       
      </section>
      <!-- changes required -->
@@ -97,72 +187,418 @@
      <!-- daily routine section -->
       <section class="dailyRoutine" id="dailyRoutine">
         <h1 class="heading"> daily <span>Routine</span></h1>
-      <!-- <div class="box-container">
-        <div class="box">
-            <img src="../image/img6.png">
-            <h3><span>MONDAY</span></h3>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <a href="#" class="btn"> Let's start </a>
-        </div>
 
-        <div class="box">
-            <img src="../image/img8.png">
-            <h3><span>TUESDAY</span></h3>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <a href="#" class="btn"> follow up </a>
-        </div>
+         <div class="swiper routine-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="image/route1.png">
+                    <h3>Good Morning</h3>
+                    <p>let's start a healthy day.</p>
+                </div>
 
-      </div> -->
-      <h3><span>MONDAY</span></h3>
-    <p>Lorem ipsum dolor sit amet.</p>
-      <div class="slider">
-        <button class="pre-btn"><img src="image/arrow.png" alt=""></button>
-      <div class="container">
-        <div class="box">
-            <!-- <img src="../image/img6.png"> -->
-            <!-- <h3><span>MONDAY</span></h3>
-            <p>Lorem ipsum dolor sit amet.</p> -->
-            <a href="#" class="btn"> 1 </a>
-        </div>
-        <div class="box">
-            <!-- <img src="../image/img6.png"> -->
-            <!-- <h3><span>MONDAY</span></h3>
-            <p>Lorem ipsum dolor sit amet.</p> -->
-            <a href="#" class="btn"> 2 </a>
-        </div>
-        <div class="box">
-            <!-- <img src="../image/img6.png"> -->
-            <!-- <h3><span>MONDAY</span></h3>
-            <p>Lorem ipsum dolor sit amet.</p> -->
-            <a href="#" class="btn"> 3 </a>
-        </div>
-        <div class="box">
-            <!-- <img src="../image/img6.png"> -->
-            <!-- <h3><span>MONDAY</span></h3>
-            <p>Lorem ipsum dolor sit amet.</p> -->
-            <a href="#" class="btn"> 4 </a>
-        </div>
-        <div class="box">
-            <!-- <img src="../image/img6.png"> -->
-            <!-- <h3><span>MONDAY</span></h3>
-            <p>Lorem ipsum dolor sit amet.</p> -->
-            <a href="#" class="btn"> 5 </a>
-        </div>
-    </div>
-      <button class="nxt-btn"><img src="image/arrow.png" alt=""></button>
+                <div class="swiper-slide box">
+                    <img src="image/route2.png">
+                    <h3>Morning Yoga</h3>
+                </div>
 
-      </div>
+                <div class="swiper-slide box">
+                    <img src="image/route3.png">
+                    <h3>BreakFast</h3>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/route4.png">
+                    <h3>Medicines</h3>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/route5.png">
+                    <h3>Doctor Time</h3>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/route6.png">
+                    <h3>Rest</h3>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/route7.png">
+                    <h3>Evening walk</h3>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/route8.png">
+                    <h3>Rest</h3>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/route9.png">
+                    <h3>Meal</h3>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/route10.png">
+                    <h3>Medicines</h3>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/route11.png">
+                    <h3>sleep Time</h3>
+                </div>
+            </div>
+        </div> 
 
 
-    </section> 
+        </section>
      <!-- daily Schedule -->
 
+     <!-- Buy Section(Products) -->
+     <section class="products" id="products">
+        <h1 class="heading">Our <span>Products</span></h1>
+        <div class="swiper product-slider"> 
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="image/product1.jpg">
+                    <h1>Yoga Products</h1>
+                    <a href="https://www.amazon.in/s?k=yoga+products&crid=3QCHCALY9FB5F&sprefix=yoga+products%2Caps%2C307&ref=nb_sb_noss_1" class="btn">Go To</a>
+                </div>
+                
+                <div class="swiper-slide box">
+                    <img src="image/product2.jpg">
+                    <h1>Medicines</h1>
+                    <a href="https://pharmeasy.in/?isSEM=true&&utm_source=google&utm_medium=cpc&utm_campaign=GSB_New_CX_FP&utm_adgroup=Core&gclid=CjwKCAjwm8WZBhBUEiwA178UnJ7Hd5y_CZXl3t0-YfV2Ew_jy_hafcKL9FD6wSydCLvs0FpefqPzMBoCwu0QAvD_BwE" class="btn">Go To</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/product3.jpg">
+                    <h1>Health Kit</h1>
+                    <a href="https://pharmeasy.in/health-care?src=header" class="btn">Go To</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/product4.jpg">
+                    <h1>Checkup</h1>
+                    <a href="https://www.netmeds.com/health-packages?source_attribution=ADW-CPC-DiagnosticPack&utm_source=ADW-CPC-DiagnosticPack&utm_medium=CPC&utm_campaign=ADW-CPC-DiagnosticPack&gclid=CjwKCAjwm8WZBhBUEiwA178UnNUteYCtYPQN96bD3PEaKgBJ2wu7RBGQHvFjQX9BsV_MJqE07--jExoCvBwQAvD_BwE" class="btn">Go To</a>
+                </div>
 
 
 
 
+            </div>
+        </div>
 
 
+     <!-- Second slider inside the section -->
+        <div class="swiper product-slider"> 
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="image/product5.jpg">
+                    <h1>Entertainment</h1>
+                    <a href="https://www.hotstar.com/in" class="btn">Go To</a>
+                </div>
+                
+                <div class="swiper-slide box">
+                    <img src="image/product6.jpg">
+                    <h1>Music</h1>
+                    <a href="https://www.saregama.com/song/abhi-na-jao-chhod-kar_9451" class="btn">Go To</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/product7.jpg">
+                    <h1>Books</h1>
+                    <a href="https://www.sahapedia.org/history-hindi-comic-books-india?gclid=CjwKCAjwm8WZBhBUEiwA178UnF-DCemJ8GLcDFzvALe-ohRBkn0kgFafpjC65KL01Bdqj0j403p38hoCf_AQAvD_BwE" class="btn">Go To</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/product8.jpg">
+                    <h1>games</h1>
+                    <a href="https://entertaininggames.club/" class="btn">Go To</a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+     </section>
+     <!-- Buy Section(Products) -->
+
+     <!-- Call Section  -->
+        <section class="review" id="review">
+            <h1 class="heading">Doctor's <span>Review </span></h1>
+            <div class="swiper review-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <img src="image/pic1.jpg" >
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nulla necessitatibus nemo qui repudiandae eius fugiat voluptate harum. Earum, similique.</p>
+                        <h3>Dr.Aaley </h3>
+                       
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="image/pic2.jpg" >
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nulla necessitatibus nemo qui repudiandae eius fugiat voluptate harum. Earum, similique.</p>
+                        <h3>Dr.John </h3>
+                       
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="image/pic3.jpg" >
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nulla necessitatibus nemo qui repudiandae eius fugiat voluptate harum. Earum, similique.</p>
+                        <h3>Dr.Smith </h3>
+                       
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="image/pic4.jpg" >
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nulla necessitatibus nemo qui repudiandae eius fugiat voluptate harum. Earum, similique.</p>
+                        <h3>Dr.Wood </h3>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- review  Section  -->
+
+     <!-- Blog Section -->
+     <section class="blog" id="blog">
+      <h1 class="heading"><span>Blogs</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+            <img src="image/blog1.jpg">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i> By User </a>
+                    <a href="#"><i class="fa fa-calendar"></i> 1st May, 2021 </a>
+
+                </div>
+                <h3> Precautionary guidlines from Government. </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam blanditiis laboriosam quo quos cupiditate ut?</p>
+                <a href="#" class="btn"> Read More</a>
+          
+            </div>
+
+        </div>
+
+        <div class="box">
+            <img src="image/blog2.jpg">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i> By User </a>
+                    <a href="#"><i class="fa fa-calendar"></i> 3rd May, 2021 </a>
+
+                </div>
+                <h3> Message for people of india by Pm modi on covid-19.. </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam blanditiis laboriosam quo quos cupiditate ut?</p>
+                <a href="#" class="btn"> Read More</a>
+          
+            </div>
+
+        </div>
+
+        <div class="box">
+            <img src="image/blog3.jpg">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i> By User </a>
+                    <a href="#"><i class="fa fa-calendar"></i> 7th May, 2021 </a>
+
+                </div>
+                <h3> Vaccine rollover in India. </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam blanditiis laboriosam quo quos cupiditate ut?</p>
+                <a href="#" class="btn"> Read More</a>
+          
+            </div>
+
+        </div>
+
+
+      </div>
+     </section>
+     <!-- Blog Section -->
+
+<!-- Footer Section -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>group</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our serives</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">programs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Advice</h4>
+                <ul>
+                    <li><a href="#">design </a></li>
+                    <li><a href="#">quality </a></li>
+                    <li><a href="#">services </a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>follow</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/"  target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/i/flow/login"  target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/shivam-yadav-75b586195"  target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/ShivamY125"  target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!-- Script for popup button checkUp -->
+<script>
+    document.getElementById("btn1").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "flex";
+    })
+
+   document.querySelector(".close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+   })
+
+</script>
+
+
+<!-- Script file for products slider window  -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- script file to link html file with scriptjs file. -->
     <script src="_3js/script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getFirestore, collection, doc, getDocs, addDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyAufhbXcTWy9Gn2lMPDkHoWCmgAZMT4WVM",
+          authDomain: "project-kratin.firebaseapp.com",
+          projectId: "project-kratin",
+          storageBucket: "project-kratin.appspot.com",
+          messagingSenderId: "459207150087",
+          appId: "1:459207150087:web:79210ac997fb40b6edf8a2"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        async function logIn(){
+            var userEmail = document.getElementById("email");
+            var userpassword = document.getElementById("password");
+            var flg = false;
+            var pswd = false;
+            const querySnapshot = await getDocs(collection(db,"users"));
+            querySnapshot.forEach((doc=> {
+                if(userEmail.value == doc.data()['email']){
+                    flg = true;
+                    if(userpassword.value == doc.data()['password']){
+                        pswd = true;
+                        localStorage.clear();
+                        localStorage.id = doc.id;
+                        //localStorage.setItem('tag', doc.data()['tag'])
+                        console.log("aa meri jaan chal gaya BC");
+                    }
+                }
+                else console.log("gaand lag gyi");
+            }));
+            if(!flg){
+                alert("BC ja k register kr");
+                userEmail.value = "";
+                userpassword.value = "";
+            }
+            else if (!pswd){
+                alert("Kya haal bhai jaan"); 
+                userEmail.value = "";
+                userpassword.value = "";
+            }
+            else{
+                location.reload();
+            }
+        }
+        
+
+         loginBtn.addEventListener("click", (event)=>{
+                event.preventDefault();
+                logIn();
+            });
+
+
+        // koka boora
+
+        async function addDetail(){
+            var uday = document.getElementById("day").value;
+            var uweight = document.getElementById("kg").value;
+            var uheight = document.getElementById("cm").value;
+            var utmp = document.getElementById("cel").value;
+            var ublood = document.getElementById("enter").value;
+            var uheart = document.getElementById("beats").value;
+            var uoxy = document.getElementById("oxy").value;
+            var uchol = document.getElementById("min").value;
+            var usugar = document.getElementById("sugar").value;
+            var uplate = document.getElementById("plate").value;
+            var urbc = document.getElementById("rbc").value;
+            var uwbc = document.getElementById("wbc").value;
+            var uinfec = document.getElementById("infec").value;
+            var ufin = document.getElementById("final").value;
+
+           
+            try{
+                var recId = "";
+                const docRef = await addDoc(collection(db,"users", localStorage.id, "checkup-Details"),{
+                    day : uday,
+                    weight : uweight,
+                    height : uheight,
+                    tmp : utmp,
+                    blood : ublood,
+                    heart : uheart,
+                    oxy : uoxy,
+                    chol : uchol,
+                    sugar : usugar,
+                    plate : uplate,
+                    rbc : urbc,
+                    wbc : uwbc,
+                    infec : uinfec,
+                    fin : ufin
+                });
+                const docRef2 = await updateDoc(doc(db,"users", localStorage.id),{
+                    latest : docRef.id
+                });
+            } catch(e){
+                console.error(e);
+            }
+        }
+
+        detSub.addEventListener("click", (event)=>{
+            event.preventDefault();
+            addDetail();
+        });
+
+      </script>
 </body>
 </html>
